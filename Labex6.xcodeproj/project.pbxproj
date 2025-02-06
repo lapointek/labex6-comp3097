@@ -76,6 +76,7 @@
 			children = (
 				4A7A261D2D55507900FA7FC3 /* Labex6 */,
 				4A7A262E2D55507A00FA7FC3 /* Labex6Tests */,
+				4A7A262F2D55507A00FA7FC3 /* Labex6Tests.swift */,
 				4A7A26382D55507A00FA7FC3 /* Labex6UITests */,
 				4A7A261C2D55507900FA7FC3 /* Products */,
 			);
@@ -113,7 +114,6 @@
 		4A7A262E2D55507A00FA7FC3 /* Labex6Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4A7A262F2D55507A00FA7FC3 /* Labex6Tests.swift */,
 			);
 			path = Labex6Tests;
 			sourceTree = "<group>";
