@@ -15,12 +15,10 @@ struct ContentView: View {
     var body: some View {
         
             VStack {
-                Image("Calculator")
+                Image("calculator")
                     .resizable()
-                    .scaledToFit()
+                    .aspectRatio(contentMode: .fit)
                     .frame(height:100)
-                    .padding()
-                
                 Text("\(outputValue)")
                     .font(.largeTitle)
                     .padding()
@@ -29,32 +27,22 @@ struct ContentView: View {
                     Button("Reset", action: {
                         outputValue = 0
                     }).buttonStyle(.bordered)
+                    
                     Button("Step", action: {
                         stepValue = (stepValue == 1) ? 2 : 1
                     }).buttonStyle(.bordered)
+                    
                     Button("Subtract", action: {
                         outputValue -= stepValue
                     }).buttonStyle(.bordered)
+                    
                     Button("Add", action: {
                         outputValue += stepValue
                     }).buttonStyle(.bordered)
+                }
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #Preview {
