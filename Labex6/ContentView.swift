@@ -8,41 +8,49 @@
 import SwiftUI
 
 struct ContentView: View {
-
-    @State private var outputValue: Int = 0
-    @State private var stepValue: Int = 1
+    
+    @State private var outputVal: Int = 0
+    @State private var stepVal: Int = 1
     
     var body: some View {
-        
+        ZStack{
+            Color(.systemGray6)
+            
+            
             VStack {
                 Image("calculator")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height:100)
-                Text("\(outputValue)")
+                Text("\(outputVal)")
                     .font(.largeTitle)
                     .padding()
                 
                 HStack{
                     Button("Reset", action: {
-                        outputValue = 0
+                        outputVal = 0
                     }).buttonStyle(.bordered)
+                        .tint(Color.blue)
                     
                     Button("Step", action: {
-                        stepValue = (stepValue == 1) ? 2 : 1
+                        stepVal = (stepVal == 1) ? 2 : 1
                     }).buttonStyle(.bordered)
+                        .tint(Color.blue)
                     
                     Button("Subtract", action: {
-                        outputValue -= stepValue
+                        outputVal -= stepVal
                     }).buttonStyle(.bordered)
+                        .tint(Color.blue)
                     
                     Button("Add", action: {
-                        outputValue += stepValue
+                        outputVal += stepVal
                     }).buttonStyle(.bordered)
+                        .tint(Color.blue)
                 }
             }
         }
     }
+}
 
 
 #Preview {
